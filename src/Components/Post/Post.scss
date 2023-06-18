@@ -1,0 +1,16 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+  width: 18rem;
+  margin: 0 4px 10px;
+  &__avatar {
+    display: flex;
+    justify-content: center;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

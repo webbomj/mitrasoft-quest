@@ -3,9 +3,10 @@ import { useAppDispatch, useAppSelector } from "../../Store/hook";
 import { IPost, addPosts } from "../../Store/slices/postSlice";
 import axios from "axios";
 import { RootState } from "../../Store/store";
+import PostList from "../../Components/PostList/PostList";
 
 function MainPage() {
-  const count = useAppSelector((state: RootState) => state.postData.posts);
+  const posts = useAppSelector((state: RootState) => state.postData.posts);
 
   const dispatch = useAppDispatch();
 
@@ -17,11 +18,7 @@ function MainPage() {
 
   return (
     <div>
-      {count.map((post) => (
-        <div key={post.id} id={post.id.toString()}>
-          {post.userId}
-        </div>
-      ))}
+      <PostList posts={posts}></PostList>
     </div>
   );
 }

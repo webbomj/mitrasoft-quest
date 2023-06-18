@@ -17,7 +17,7 @@ function Header() {
               <Nav.Link href="#link">Обо мне</Nav.Link>
               <Nav.Link href="#link">Подробности о пользователе</Nav.Link>
               <div className="header__info">
-                <Avatar></Avatar>
+                <Avatar id={1}></Avatar>
                 <div className="header__name">Andrey Lapin</div>
                 <div className="header__mail">nethack@mail.ru</div>
               </div>
