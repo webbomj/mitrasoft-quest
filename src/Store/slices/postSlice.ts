@@ -11,12 +11,14 @@ export interface IPostState {
   posts: IPost[];
   isLoading: boolean;
   currentUser: number | null;
+  currentPage: number;
 }
 
 const initialState: IPostState = {
   posts: [],
   isLoading: false,
   currentUser: null,
+  currentPage: 1,
 };
 
 export const postSlice = createSlice({
@@ -32,9 +34,13 @@ export const postSlice = createSlice({
     setCurrentUser: (state, action) => {
       state.currentUser = action.payload;
     },
+    setCurrentPage: (state, action) => {
+      state.currentPage = action.payload;
+    },
   },
 });
 
-export const { addPosts, loading, setCurrentUser } = postSlice.actions;
+export const { addPosts, loading, setCurrentUser, setCurrentPage } =
+  postSlice.actions;
 
 export default postSlice.reducer;
