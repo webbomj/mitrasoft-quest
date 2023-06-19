@@ -1,13 +1,18 @@
 .post {
   display: flex;
-  flex-direction: column;
-  max-width: 18rem;
-  width: 18rem;
-  margin: 0 4px 10px;
-  &__avatar {
+  justify-content: center;
+  width: calc(100% - (20px * 2));
+  margin: 10px 0px;
+
+  &__container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
   }
+
+  &__avatar {
+    margin: 15px 20px;
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
